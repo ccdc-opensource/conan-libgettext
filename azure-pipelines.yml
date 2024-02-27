@@ -1,0 +1,15 @@
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      endpoint: github
+      name: ccdc-opensource/conan-azure-devops
+      ref: refs/heads/development
+
+extends:
+  template: third-party-library-all-platforms-from-conan-center.yml@templates
+  parameters:
+    package: libgettext
+    package_version: 0.22
+    source_repository: public-conan-center
+    destination_repository: ccdc-3rdparty-conan
